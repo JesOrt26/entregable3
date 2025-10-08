@@ -7,35 +7,44 @@
 </head>
 <body>
     <script>
-        let valor1 = parseInt(prompt("Digite valor 1: "));
-        let valor2 = parseInt(prompt("Digite valor 2: "));
-        let operacion = prompt("Digite la operación: ");
 
-        function realizarOperacion (valor1, valor2, operacion) {
+        let respuesta = "";
 
-            if (operacion === "multiplicacion") {
-                document.write ("La multiplicación es: ", valor1 * valor2)
-            }
-            else if (operacion === "suma") {
-                document.write ("La suma es: ", valor1 + valor2)
-            }
-            else if (operacion === "resta") {
-                document.write ("La resta es: ", valor1 - valor2)
-            }
-            else if (operacion === "division") {
-                if(valor2 === 0) {
-                    document.write ("No se puede dividir por 0")
+        while (respuesta != "salir") {
+
+            let valor1 = parseInt(prompt("Digite valor 1: "));
+            let valor2 = parseInt(prompt("Digite valor 2: "));
+            let operacion = prompt("Digite la operación: ");
+
+            function realizarOperacion (valor1, valor2, operacion) {
+
+                if (operacion === "multiplicacion") {
+                    alert ("La multiplicación es: " + (valor1 * valor2))
+                }
+                else if (operacion === "suma") {
+                    alert ("La suma es: " + (valor1 + valor2))
+                }
+                else if (operacion === "resta") {
+                    alert ("La resta es: " + (valor1 - valor2))
+                }
+                else if (operacion === "division") {
+                    if(valor2 === 0) {
+                        alert ("No se puede dividir por 0")
+                    }
+                    else {
+                        alert ("La división es: " +  (valor1 / valor2))
+                    }
                 }
                 else {
-                    document.write ("La división es: ", valor1 / valor2)
+                alert ("operacion inválida")
                 }
             }
-            else {
-            document.write ("operacion inválida")
-            }
-        }
 
-        realizarOperacion (valor1, valor2, operacion);
+            realizarOperacion (valor1, valor2, operacion);
+
+        respuesta = prompt ("Si desea salir, escriba la palabra salir");
+
+    }
     </script>
 </body>
 </html>
