@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let valor1 = parseInt(prompt("Digite valor 1: "));
+        let valor2 = parseInt(prompt("Digite valor 2: "));
+        let operacion = prompt("Digite la operación: ");
+
+        function realizarOperacion (valor1, valor2, operacion) {
+
+            if (operacion === "multiplicacion") {
+                document.write ("La multiplicación es: ", valor1 * valor2)
+            }
+            else if (operacion === "suma") {
+                document.write ("La suma es: ", valor1 + valor2)
+            }
+            else if (operacion === "resta") {
+                document.write ("La resta es: ", valor1 - valor2)
+            }
+            else if (operacion === "division") {
+                if(valor2 === 0) {
+                    document.write ("No se puede dividir por 0")
+                }
+                else {
+                    document.write ("La división es: ", valor1 / valor2)
+                }
+            }
+            else {
+            document.write ("operacion inválida")
+            }
+        }
+
+        realizarOperacion (valor1, valor2, operacion);
+    </script>
+</body>
+</html>
